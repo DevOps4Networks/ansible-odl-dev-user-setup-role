@@ -1,0 +1,73 @@
+---
+dependencies: []
+#dependencies:
+  # List your role dependencies here, one per line. Only
+  # dependencies available via galaxy should be listed here.
+  # Be sure to remove the '[]' above if you add dependencies
+  # to this list.
+  
+galaxy_info:
+  author: Nathan Sowatskey
+  description: A role for installing eclipse for the ODL Dev VM
+  company: OpenDaylight
+  license: GPLv3
+  min_ansible_version: 1.6.3
+  platforms:
+  - name: Redhat
+  - name: Ubuntu
+    versions:
+    - all
+    - lucid
+    - maverick
+    - natty
+    - oneiric
+    - precise
+    - quantal
+    - raring
+    - saucy
+    - trusty
+  categories:
+  - development
+
+ansigenome_info:
+  galaxy_id: 'XXX'
+  galaxy_user: 'XXX'
+  galaxy_name: 'eclipse-odl-devvm'
+  
+  travis: True
+  
+  authors:
+    - name:  'Nathan Sowatskey'
+      url: 'https://www.linkedin.com/in/nathandevops'
+      email: 'nathan@nathan.to'
+      twitter: 'NathanDotTo'
+      github: 'NathanDotTo'
+      
+  synopsis: |
+    Ensures that eclipse is properly installed and configured on the ODL Dev VM using `Ansible` script.
+    
+    Taken from
+    ------------------
+    
+    https://www.eclipse.org/downloads/
+    
+    ###Requirements
+    
+    Tools which might be needed by [Eclipse](https://www.eclipse.org), like jdk, maven...
+    See available playbook on [GitHub](https://github.com/DevOps4Networks/ansible-eclipse)
+    
+  usage: |
+    Use :
+    
+        `docker run -e "DISPLAY=`ipconfig getifaddr en0`:0.0" nabla/ansible-eclipse`
+    
+    Once [Eclipse](https://www.eclipse.org) is installed using Ansible, a [Docker](https://www.docker.com/) 
+    [image](https://registry.hub.docker.com/u/nabla/ansible-eclipse/) is automatically created by [Docker Hub](https://registry.hub.docker.com/), 
+    so please do not hesitate to enhance Ansible script it will then improve docker image automatically.
+    
+    Run the following command :
+    
+         `ansible-playbook -i hosts -c local -v eclipse.yml -vvvv --ask-sudo-pass | tee setup.log`
+    
+  #custom: |
+  #  Any custom output you want after the usage section..
