@@ -25,5 +25,5 @@
   when: redhat_desktop == 'xfce'
 
 - name: Set ownership for RedHat desktop .xinitrc
-  file: path=~odldev/.xinitrc owner=odldev mode=0644 state=touch
+  file: path=~odldev/.xinitrc owner=odldev group=ODLDEV mode=0644 state=touch
   when: ansible_os_family == 'RedHat'
