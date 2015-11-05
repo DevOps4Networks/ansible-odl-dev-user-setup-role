@@ -26,4 +26,4 @@
 
 - name: Set ownership for RedHat desktop .xinitrc
   file: path=~odldev/.xinitrc owner=odldev group=ODLDEV mode=0644 state=touch
-  when: ansible_os_family == 'RedHat'
+  when: ansible_os_family == 'RedHat' and redhat_desktop != 'gnome'
